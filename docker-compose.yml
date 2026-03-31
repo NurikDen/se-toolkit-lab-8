@@ -100,10 +100,10 @@ services:
   #       workspace: .
   #     args:
   #       REGISTRY_PREFIX_DOCKER_HUB: ${REGISTRY_PREFIX_DOCKER_HUB:-}
-  #       APP_UID: ${HOST_UID:-1000}
-  #       APP_GID: ${HOST_GID:-1000}
+  #       APP_UID: ${HOST_UID:?'HOST_UID is required'}
+  #       APP_GID: ${HOST_GID:?'HOST_GID is required'}
   #   restart: unless-stopped
-  #   user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+  #   user: "${HOST_UID:?'HOST_UID is required'}:${HOST_GID:?'HOST_GID is required'}"
   #   networks:
   #     - lms-network
   #   volumes:
