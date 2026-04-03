@@ -4,15 +4,34 @@ Paste your checkpoint evidence below. Add screenshots as image files in the repo
 
 ## Task 1A — Bare agent
 
-<!-- Paste the agent's response to "What is the agentic loop?" and "What labs are available in our LMS?" -->
+**Command:** `cd nanobot && uv run nanobot agent --logs --session cli:task1a-loop -c ./config.json -m "What is the agentic loop?"`
+
+<!-- Run this on your VM where services are running and paste the agent's response below -->
+> [Paste agent response here after running on VM]
+
+**Command:** `cd nanobot && uv run nanobot agent --logs --session cli:task1a-labs -c ./config.json -m "What labs are available in our LMS?"`
+
+<!-- Run this on your VM where services are running and paste the agent's response below -->
+> [Paste agent response here after running on VM — should NOT return real backend data at this stage]
 
 ## Task 1B — Agent with LMS tools
 
-<!-- Paste the agent's response to "What labs are available?" and "Describe the architecture of the LMS system" -->
+**Command:** `cd nanobot && uv run nanobot agent --logs --session cli:task1b-labs -c ./config.json -m "What labs are available?"`
+
+<!-- Run this on your VM and paste the agent's response below — should return real lab names -->
+> [Paste agent response here after running on VM]
+
+**Command:** `cd nanobot && uv run nanobot agent --logs --session cli:task1b-health -c ./config.json -m "Is the LMS backend healthy?"`
+
+<!-- Run this on your VM and paste the agent's response below -->
+> [Paste agent response here after running on VM]
 
 ## Task 1C — Skill prompt
 
-<!-- Paste the agent's response to "Show me the scores" (without specifying a lab) -->
+**Command:** `cd nanobot && uv run nanobot agent --logs --session cli:task1c -c ./config.json -m "Show me the scores"`
+
+<!-- Run this on your VM and paste the agent's response below — should ask which lab or list available labs -->
+> [Paste agent response here after running on VM]
 
 ## Task 2A — Deployed agent
 
